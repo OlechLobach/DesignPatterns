@@ -4,9 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Patterns1.FabricMethod
+namespace TransportFactory.Factories
 {
-    internal class CarFactory
+    public class CarFactory : ITransportFactory
     {
+        public ITransport CreateTransport()
+        {
+            return new Car();
+        }
     }
 }

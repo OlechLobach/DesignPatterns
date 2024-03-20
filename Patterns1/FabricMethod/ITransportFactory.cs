@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace TransportFactory.Factories
 {
-    public class Car : ITransport
+    public interface ITransportFactory
     {
-        public string GetInfo()
-        {
-            return "This is a car.";
-        }
+        ITransport CreateTransport();
     }
 }

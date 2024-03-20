@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
+
 
 namespace TransportFactory.Factories
 {
-    public class Car : ITransport
+    public class MotorcycleFactory : ITransportFactory
+{
+    public ITransport CreateTransport()
     {
-        public string GetInfo()
-        {
-            return "This is a car.";
-        }
+        return new Motorcycle();
     }
+}
 }

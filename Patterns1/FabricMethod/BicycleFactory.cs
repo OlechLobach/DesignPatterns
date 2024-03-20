@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace TransportFactory.Factories
 {
-    public class Car : ITransport
+    public class BicycleFactory : ITransportFactory
     {
-        public string GetInfo()
+        public ITransport CreateTransport()
         {
-            return "This is a car.";
+            return new Bicycle();
         }
     }
 }

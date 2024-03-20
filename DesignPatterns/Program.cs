@@ -1,10 +1,23 @@
-﻿namespace DesignPatterns
+﻿using System;
+
+namespace BuilderPattern
 {
-    internal class Program
+    class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            var builder = new CarBuilder();
+            var director = new CarDirector(builder);
+
+            director.ConstructCLS();
+            var cls = builder.GetCar();
+            cls.Show();
+
+            director.ConstructM5CS();
+            var m5cs = builder.GetCar();
+            m5cs.Show();
+
+            Console.ReadLine(); 
         }
     }
 }

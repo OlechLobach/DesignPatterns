@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Patterns1.FabricMethod
+namespace PrototypePattern
 {
-    internal class CarFactory
+    
+    public interface IPrototype
     {
+        IPrototype Clone();
+        string State { get; set; }
     }
 }
